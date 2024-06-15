@@ -44,5 +44,5 @@ body {
   -webkit-backdrop-filter: blur(10px);
 }
 .bg_glass{
-  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+  background: linear-gradient(rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.065));
 }
