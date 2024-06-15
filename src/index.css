@@ -33,7 +33,7 @@ body {
   filter: blur(100px);
 }
 .bg_dog {
-  background-image:  linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),url("../src/assets/glitter.png");
+  background-image:  linear-gradient(rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.065)),url("../src/assets/glitter.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

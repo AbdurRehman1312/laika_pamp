@@ -12,7 +12,7 @@ const Home = () => {
           </div>
         </div>
         <div className='relative border h-[400px] z-[100] w-full md:w-[55%] rounded-[30px] border-primary bg_glass lg:p-10 p-5 '>
-          <div className="bg-[#c140a1] h-[100%] z-[-10] filter_blur rounded-[10px] w-[50%] left-[20%] absolute" />
+          <div className="bg-[#c140a1] h-[100%] z-[-10] filter_blur rounded-[10px] w-[70%] left-[20%] absolute" />
           <h1 className='font-bungee text-3xl'>Token Matcher</h1>
         </div>
       </div>
