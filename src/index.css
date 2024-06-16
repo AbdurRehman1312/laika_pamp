@@ -46,3 +46,10 @@ body {
 .bg_glass{
   background: linear-gradient(rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.065));
 }
+
+.custom_text {
+  width: 7.5ch; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

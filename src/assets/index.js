@@ -4,3 +4,6 @@ export {default as glitter} from './glitter.png';
 export {default as x} from './x.png';
 export {default as ethe} from './ethe.png';
 export {default as dp} from './dp.png';
+export {default as astrodog} from './astrodog.png';
+export {default as msg} from './msg.png';
+export {default as rocket} from './rocket.png';
