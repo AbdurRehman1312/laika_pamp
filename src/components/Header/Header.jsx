@@ -22,9 +22,9 @@ const Header = () => {
           <div>
             <h1 className='font-bungee text-3xl'>DIP.DOG</h1>
           </div>
-          <div className='flex items-center gap-3 ml-10'>
-            <Link to="/" ><img src={images.x} alt="" className='w-4' /></Link>
-            <Link to="/" ><img src={images.telegram} alt="" className='w-4' /></Link>
+          <div className='flex items-center gap-5 ml-10'>
+            <Link to="/" ><img src={images.x} alt="" className='w-5' /></Link>
+            <Link to="/" ><img src={images.telegram} alt="" className='w-5' /></Link>
           </div>
         </div>
         <div className='flex items-center gap-5'>

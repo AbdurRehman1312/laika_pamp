@@ -32,6 +32,47 @@ body {
 .filter_blur {
   filter: blur(100px);
 }
+.bg_purple::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #772898;
+  z-index: -1;
+  filter: blur(100px);
+  height: 70%;
+  margin: auto; /* Adjust the value to extend the blur beyond the container edges */
+  }
+.bg_pink::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #c140a1;
+  z-index: -1;
+  width: 80%;
+  height: 70%;
+  margin: auto;
+  filter: blur(100px);
+  }
+.bg_blue_gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, rgba(0,34,153,1) 0%, rgba(0,209,255,1) 100%);
+  z-index: -1;
+  width: 80%;
+  height: 40%;
+  margin: auto;
+  filter: blur(200px);
+  }
 .bg_dog {
   background-image:  linear-gradient(rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.065)),url("../src/assets/glitter.png");
   background-size: cover;
