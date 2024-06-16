@@ -5,7 +5,7 @@ import ButtonImage from '../ButtonImage/ButtonImage'
 const MuttnikCard = ({image, style, created_id, market, message}) => {
     return (
         <>
-            <div className={` w-full m-auto bg_header  bg_black_gradient mt-5 rounded-[30px] py-6 px-8 ${style}`}>
+            <div className={`w-full m-auto bg_header  bg_black_gradient mt-5 rounded-[30px] py-6 px-8 ${style}`}>
                <div className='flex items-start gap-5 '>
                 <div className='rounded-2xl'>
                     <img src={image} alt="" className='w-24 h-24'/>
