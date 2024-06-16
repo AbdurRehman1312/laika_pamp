@@ -7,3 +7,6 @@ export {default as dp} from './dp.png';
 export {default as astrodog} from './astrodog.png';
 export {default as msg} from './msg.png';
 export {default as rocket} from './rocket.png';
+export {default as heart} from './heart.png';
+export {default as gear} from './gear.png';
+export {default as arrowr} from './arrowr.png';
