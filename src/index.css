@@ -144,3 +144,12 @@ body {
   border: 10px solid #d9d9d9;
   border-radius: 10px;
 }
+
+@media  (max-width: 600px){
+  .custom_text2 {
+    width: 10ch; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

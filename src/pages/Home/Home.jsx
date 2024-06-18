@@ -12,6 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import AlpaTrumpCard from '@/components/AlpaTrumpCard/AlpaTrumpCard'
+import ProfileCard from '@/components/ProfileCard/ProfileCard'
 const alpaTrumpCard = [{
   image: images.trump,
   created_id: "0xErd4512122",
@@ -138,19 +139,23 @@ const Home = () => {
               </Select>
             </div>
           </div>
-          <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-10 w-full md:gap-7 gap-5 overflow-y-auto p-5 md:h-[90vh] h-[85vh]'>
+          <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-10 w-full md:gap-7 gap-5 overflow-y-auto p-5 md:h-[90vh] h-[85vh] xl:h-[110vh]'>
             {alpaTrumpCard.map((item, index) => (
               <AlpaTrumpCard key={index} image={item.image} created_id={item.created_id} market={item.market} message={item.message} style={item.style} badge={item.badge} value_progress={88} />
             ))}
           </div>
         </div>
       </div>
-      <div className='flex lg:flex-row flex-col items-center gap-4 justify-between'>
-        <div className='relative w-full xl:w-[50%] lg:w-[60%] md:w-[55%]'>
+      <div className='flex lg:flex-row flex-col items-start gap-4 justify-between'>
+        <div className='relative w-full xl:w-[50%] lg:w-[45%]'>
           <LeaderBoardTable leaderboardLength={10} style={"bg_purple2"} all={true} date={false} />
         </div>
-        <div className='border h-[400px] z-[100] w-full xl:w-[45%] lg:w-[40%] md:w-[45%] rounded-[30px] border-primary bg_glass lg:p-10 p-5 '>
+        <div className='border  z-[100] w-full xl:w-[45%] lg:w-[55%]  rounded-[30px] border-primary bg_glass lg:p-10 p-5 '>
           <h1 className='font-bungee text-3xl'>Profile</h1>
+          <div className='mt-8'>
+          <ProfileCard username={"DipUser456"} profile_id={"1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71"} points={5400} rank={"#42/352"} like={2} message={0} profile={1} />
+          </div>
+         
         </div>
       </div>
     </section>

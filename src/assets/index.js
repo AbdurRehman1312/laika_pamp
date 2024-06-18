@@ -11,3 +11,4 @@ export {default as heart} from './heart.png';
 export {default as gear} from './gear.png';
 export {default as arrowr} from './arrowr.png';
 export {default as trump} from './trump.png';
+export {default as profile} from './profile.png';
