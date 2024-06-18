@@ -28,14 +28,14 @@ const Header = () => {
   const getActiveStyle = ({ isActive }) => isActive ? 'text-white border-b' : 'text-gray-400';
   const [selectedOption1, setSelectedOption1] = useState(coins[0].id);
   return (
-    <header className='flex '>
-      <div className=' bg_header flex justify-between py-2 px-5 items-center w-[84%]'>
+    <header className='flex'>
+      <div className=' bg_header flex justify-between py-2 lg:px-5 px-2 items-center lg:w-[84%] w-full'>
         <div className='flex  items-center'>
-          <NavLink to="/" className='w-[11%]'>
+          <NavLink to="/" className='md:w-[11%] w-[25%]'>
             <img src={images.logo} alt="" className='w-24' />
           </NavLink>
           <div>
-            <h1 className='font-bungee text-3xl'>DIP.DOG</h1>
+            <h1 className='font-bungee md:text-3xl text-xl'>DIP.DOG</h1>
           </div>
           <div className='flex items-center gap-5 ml-10'>
             <Link to="/" ><img src={images.x} alt="" className='w-5' /></Link>
