@@ -2,7 +2,7 @@ import React from 'react'
 import * as images from "../../assets"
 import { Progress } from "@/components/ui/progress"
 import ButtonImage from '../ButtonImage/ButtonImage'
-const MuttnikCard = ({image, style, created_id, market, message, text}) => {
+const MuttnikCard = ({image, style, created_id, market, message, text, value_progress}) => {
     return (
         <>
             <div className={`w-full m-auto bg_header  bg_black_gradient mt-5 rounded-[30px] py-6 px-8 ${style}`}>
@@ -18,7 +18,7 @@ const MuttnikCard = ({image, style, created_id, market, message, text}) => {
                </div>
                <div className='flex items-end gap-5 mt-2'>
                <div className='w-[45%] mt-3'>
-                <Progress value={70} />
+                <Progress value={value_progress} />
                </div>
                <div className='w-[55%] flex items-center gap-1'>
                 <img src={images.msg} alt="" className='w-3 h-3'/>

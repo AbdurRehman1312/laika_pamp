@@ -149,7 +149,7 @@ const Home = () => {
         <div className='relative bg_dog border z-[100] w-full xl:w-[40%] lg:w-[50%] md:w-[70%]   rounded-[30px] border-primary lg:p-10 p-5'>
           <h1 className='font-bungee md:text-3xl text-xl'>DOG OF THE DAY</h1>
           <div className='md:w-[90%] w-full m-auto'>
-            <MuttnikCard image={images.astrodog} created_id={"0xErd4512122"} market={"550k"} message={3} text="Lorem ipsum dolor si amet. Lorem ipsum dolor si amet Lorem ipsum dolor si amet. Lorem ipsum dolor si amet" />
+            <MuttnikCard image={images.astrodog} created_id={"0xErd4512122"} market={"550k"} message={3} text="Lorem ipsum dolor si amet. Lorem ipsum dolor si amet Lorem ipsum dolor si amet. Lorem ipsum dolor si amet" value_progress={88} />
           </div>
           <div className='absolute bg-secondary rounded-lg px-7 py-1 top-12 lg:top-20 right-1 lg:right-10'>
             <h1 className='font-bungee text-2xl text-white'>#1</h1>
@@ -192,7 +192,7 @@ const Home = () => {
           </div>
           <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-10 w-full md:gap-7 gap-5 overflow-y-auto p-5 md:h-[90vh] h-[85vh]'>
             {alpaTrumpCard.map((item, index) => (
-              <AlpaTrumpCard key={index} image={item.image} created_id={item.created_id} market={item.market} message={item.message} style={item.style} badge={item.badge} />
+              <AlpaTrumpCard key={index} image={item.image} created_id={item.created_id} market={item.market} message={item.message} style={item.style} badge={item.badge} value_progress={88} />
             ))}
           </div>
         </div>

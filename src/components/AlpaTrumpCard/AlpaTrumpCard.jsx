@@ -3,7 +3,7 @@ import * as images from "../../assets"
 import { Progress } from "@/components/ui/progress"
 import ButtonRocket from '../ButtonRocket/ButtonRocket'
 
-const AlpaTrumpCard = ({ image, style, created_id, market, message, badge = false }) => {
+const AlpaTrumpCard = ({ image, style, created_id, market, message, badge = false, value_progress}) => {
     return (
         <>
             <div className={`w-full m-auto bg_header relative bg_black_gradient mt-5 z-40 rounded-[30px] py-6 px-8 ${style}`}>
@@ -19,7 +19,7 @@ const AlpaTrumpCard = ({ image, style, created_id, market, message, badge = fals
                 </div>
                 <div className='flex items-end w-full gap-5 mt-4'>
                     <div className='w-[45%] mb-2 mt-3'>
-                        <Progress value={88} />
+                        <Progress value={value_progress} />
                     </div>
                     <div className='flex items-end w-[55%] justify-between'>
                         <div className=' flex items-center mb-2 gap-1'>
