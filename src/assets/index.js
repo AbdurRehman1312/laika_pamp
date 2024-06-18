@@ -14,3 +14,6 @@ export {default as trump} from './trump.png';
 export {default as profile} from './profile.png';
 export {default as close} from './close.png';
 export {default as menu} from './menu.svg';
+export {default as tokenimg} from './tokenimg.png';
+export {default as crossSlide} from './crossSlide.png';
+export {default as nextSlide} from './nextSlide.png';

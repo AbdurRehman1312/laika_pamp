@@ -21,7 +21,7 @@ const MuttnikCard = ({ image, style, created_id, market, message, text, value_pr
                         <Progress value={value_progress} />
                     </div>
                     <div className='w-[55%] flex items-center gap-1'>
-                        <img src={images.msg} alt="" className='w-3 h-3' />
+                        <img src={images.msg} alt="" className='w-4' />
                         <p className='text-white font-medium text-sm md:text-base'>{message}</p>
                     </div>
                 </div>
