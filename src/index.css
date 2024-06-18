@@ -45,6 +45,32 @@ body {
   height: 70%;
   margin: auto; /* Adjust the value to extend the blur beyond the container edges */
   }
+.bg_purple2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #772898;
+  z-index: -1;
+  filter: blur(100px);
+  height: 40%;
+  margin: auto; /* Adjust the value to extend the blur beyond the container edges */
+  }
+.bg_dog::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #772898;
+  z-index: -1;
+  filter: blur(100px);
+  height: 70%;
+  margin: auto; /* Adjust the value to extend the blur beyond the container edges */
+  }
 .bg_pink::before {
   content: '';
   position: absolute;

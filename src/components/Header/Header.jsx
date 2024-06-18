@@ -29,7 +29,7 @@ const Header = () => {
         </div>
         <div className='flex items-center gap-5'>
 
-          <ul className='list-none flex gap-10 items-center'>
+          <ul className='list-none lg:flex gap-10 items-center hidden'>
             {links.map((link, index) => (
               <li key={index}>
                 <NavLink to={link.path} className={({ isActive }) => getActiveStyle({ isActive })}>
