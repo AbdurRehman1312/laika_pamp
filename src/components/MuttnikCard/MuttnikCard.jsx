@@ -2,7 +2,7 @@ import React from 'react'
 import * as images from "../../assets"
 import { Progress } from "@/components/ui/progress"
 import ButtonImage from '../ButtonImage/ButtonImage'
-const MuttnikCard = ({image, style, created_id, market, message}) => {
+const MuttnikCard = ({image, style, created_id, market, message, text}) => {
     return (
         <>
             <div className={`w-full m-auto bg_header  bg_black_gradient mt-5 rounded-[30px] py-6 px-8 ${style}`}>
@@ -26,7 +26,7 @@ const MuttnikCard = ({image, style, created_id, market, message}) => {
                </div>
                </div>
                <div className='mt-5'>
-                    <p className='italic text-xl text-gray-400 '>Lorem ipsum dolor si amet. Lorem ipsum dolor si amet Lorem ipsum dolor si amet. Lorem ipsum dolor si amet</p>
+                    <p className='italic text-xl text-gray-400 '>{text}</p>
                </div>
                <div className='mt-3 flex justify-center'>
                   <ButtonImage name={"pamp it"}/>

@@ -94,3 +94,12 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 10px solid #d9d9d9;
+  border-radius: 10px;
+}
