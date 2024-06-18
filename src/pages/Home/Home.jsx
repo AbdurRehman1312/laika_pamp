@@ -146,7 +146,7 @@ const Home = () => {
               <CarouselPrevious className="" />
               <p className='font-bungee mt-2'>FUCK NO.</p>
             </div>
-            <div className='absolute top-[40%] right-[5%] lg:flex hidden flex-col items-center'>
+            <div className='absolute top-[40%] lg:right-[-10px] xl:right-[5%] lg:flex hidden flex-col items-center'>
               <CarouselNext />
               <p className='font-bungee mt-2'>Yes Please!</p>
             </div>
