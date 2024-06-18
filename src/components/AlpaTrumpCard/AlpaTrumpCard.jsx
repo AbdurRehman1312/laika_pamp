@@ -18,20 +18,20 @@ const AlpaTrumpCard = ({ image, style, created_id, market, message, badge = fals
                     </div>
                 </div>
                 <div className='flex items-end w-full gap-5 mt-4'>
-                    <div className='w-[45%] mb-2 mt-3'>
+                    <div className='md:w-[45%] w-[70%] mb-2 mt-3 md:text-base text-sm'>
                         <Progress value={value_progress} />
                     </div>
                     <div className='flex items-end w-[55%] justify-between'>
                         <div className=' flex items-center mb-2 gap-1'>
                             <img src={images.msg} alt="" className='w-3 h-3' />
-                            <p className='text-white font-medium'>{message}</p>
+                            <p className='text-white font-medium text-sm md:text-base'>{message}</p>
                         </div>
                         <div>
                             <ButtonRocket />
                         </div>
                     </div>
                 </div>
-                {badge && <div className='absolute bg-secondary rounded-[10px] z-50 px-5 py-4 top-[-30px] right-[-10px]'>
+                {badge && <div className='absolute bg-secondary md:rounded-[10px] rounded-lg z-50 md:px-5 md:py-4 px-3 py-2 md:top-[-30px] top-[-20px] right-[-10px]'>
                     <h1 className='text-sm text-white'>+25% PTS</h1>
                 </div>}
             </div>

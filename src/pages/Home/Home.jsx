@@ -21,50 +21,23 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import AlpaTrumpCard from '@/components/AlpaTrumpCard/AlpaTrumpCard'
-const invoices = [
-  {
-    invoice: "INV001",
-    paymentStatus: "Paid",
-    totalAmount: "$250.00",
-    paymentMethod: "Credit Card",
-  },
-  {
-    invoice: "INV002",
-    paymentStatus: "Pending",
-    totalAmount: "$150.00",
-    paymentMethod: "PayPal",
-  },
-  {
-    invoice: "INV003",
-    paymentStatus: "Unpaid",
-    totalAmount: "$350.00",
-    paymentMethod: "Bank Transfer",
-  },
-  {
-    invoice: "INV004",
-    paymentStatus: "Paid",
-    totalAmount: "$450.00",
-    paymentMethod: "Credit Card",
-  },
-  {
-    invoice: "INV005",
-    paymentStatus: "Paid",
-    totalAmount: "$550.00",
-    paymentMethod: "PayPal",
-  },
-  {
-    invoice: "INV006",
-    paymentStatus: "Pending",
-    totalAmount: "$200.00",
-    paymentMethod: "Bank Transfer",
-  },
-  {
-    invoice: "INV007",
-    paymentStatus: "Unpaid",
-    totalAmount: "$300.00",
-    paymentMethod: "Credit Card",
-  },
-]
+import { Link } from 'react-router-dom'
+const leaderboard = [{
+  rank: 256,
+  user: "You",
+  loyalty: "100%",
+  points: "14",
+}];
+for (let i = 1; i <= 10; i++) {
+  if (i !== 256) {
+    leaderboard.push({
+      rank: i,
+      user: "Dogelord54",
+      loyalty: "100%",
+      points: "4526",
+    });
+  }
+}
 const alpaTrumpCard = [{
   image: images.trump,
   created_id: "0xErd4512122",
@@ -168,20 +141,21 @@ const Home = () => {
               <ButtonImageP image={images.gear} />
             </div>
             <div className='flex flex-1 items-center gap-4'>
-              <input type="text" className='w-full bg-black appearance-none border-0 text-lg focus:outline-none py-4 px-4 rounded-[15px]' placeholder='pamptoken...' />
+              <input type="text" className='w-full bg-black appearance-none border-0 md:text-lg text-sm focus:outline-none md:p-4 p-2.5 md:rounded-[15px] rounded-md' placeholder='pamptoken...' />
               <ButtonImageP image={images.arrowr} />
             </div>
-            <div className='flex gap-3 lg:flex-row flex-col items-center'>
+            <div className='flex gap-3 items-center'>
               <Select>
-                <SelectTrigger className="w-[183px] bg-[#4563ff] border-0 py-4 px-3">
+                <SelectTrigger className=" bg-[#4563ff] border-0 md:py-4 md:px-3 py-2 px-1.5 text-sm lg:text-base md:rounded-[10px] rounded-md">
                   <SelectValue placeholder="sort: pamp order" />
                 </SelectTrigger>
-                <SelectContent className="bg-[#4563ff] border-0">
-                  <SelectItem value="pamp order">pamp order</SelectItem>
+                <SelectContent className="bg-[#4563ff] border-0 z-50">
+                  <SelectItem value="pamp order">sort: pamp order</SelectItem>
+                  <SelectItem value="r">sort: pamp order</SelectItem>
                 </SelectContent>
               </Select>
-              <Select>
-                <SelectTrigger className="w-[143px] py-4 px-3">
+              <Select className="z-30">
+                <SelectTrigger className=" md:py-4 md:px-3 py-2 px-1.5 text-sm lg:text-base md:rounded-[10px] rounded-md">
                   <SelectValue placeholder="order: desc" />
                 </SelectTrigger>
                 <SelectContent >
@@ -199,35 +173,31 @@ const Home = () => {
       </div>
       <div className='flex lg:flex-row flex-col items-center gap-4 justify-between'>
         <div className='relative bg_glass border z-[100] w-full xl:w-[50%] lg:w-[60%] md:w-[55%] bg_blur bg_purple2 rounded-[30px] border-primary lg:p-10 p-5'>
-          <h1 className='font-bungee  text-3xl'>LEADERBOARD</h1>
-          <div className='md:w-[90%] w-full m-auto'>
-            <Table>
-              <TableCaption>A list of your recent invoices.</TableCaption>
+          <h1 className='font-bungee md:text-3xl text-xl'>LEADERBOARD</h1>
+          <div className='w-full mt-10'>
+            <Table className="border">
               <TableHeader>
                 <TableRow>
-                  <TableHead className="w-[100px]">Invoice</TableHead>
-                  <TableHead>Status</TableHead>
-                  <TableHead>Method</TableHead>
-                  <TableHead className="text-right">Amount</TableHead>
+                  <TableHead>Rank</TableHead>
+                  <TableHead>User</TableHead>
+                  <TableHead>Loyalty</TableHead>
+                  <TableHead >Points</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {invoices.map((invoice) => (
-                  <TableRow key={invoice.invoice}>
-                    <TableCell className="font-medium">{invoice.invoice}</TableCell>
-                    <TableCell>{invoice.paymentStatus}</TableCell>
-                    <TableCell>{invoice.paymentMethod}</TableCell>
-                    <TableCell className="text-right">{invoice.totalAmount}</TableCell>
+                {leaderboard.map((item, index) => (
+                  <TableRow key={item.rank} className={index === 0 ? 'bg-blue-600' : ''}>
+                    <TableCell className="font-medium">{item.rank}</TableCell>
+                    <TableCell>{item.user}</TableCell>
+                    <TableCell>{item.loyalty}</TableCell>
+                    <TableCell>{item.points}</TableCell>
                   </TableRow>
                 ))}
               </TableBody>
-              <TableFooter>
-                <TableRow>
-                  <TableCell colSpan={3}>Total</TableCell>
-                  <TableCell className="text-right">$2,500.00</TableCell>
-                </TableRow>
-              </TableFooter>
             </Table>
+            <Link to={"/"} className=''>
+              <ButtonTextImageP name={"See all"} img={false} style={"w-[100px] mx-auto mt-10"} />
+            </Link>
           </div>
         </div>
         <div className='border h-[400px] z-[100] w-full xl:w-[45%] lg:w-[40%] md:w-[45%] rounded-[30px] border-primary bg_glass lg:p-10 p-5 '>

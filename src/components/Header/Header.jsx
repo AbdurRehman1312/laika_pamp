@@ -77,7 +77,7 @@ const Header = () => {
 
         </div>
       </div>
-      <div className='bg-[#37405a] w-[16%] hidden lg:flex gap-5 items-center justify-center py-2'>
+      <Link to={"/profile"} className='bg-[#37405a] w-[16%] hidden lg:flex gap-5 items-center justify-center py-2'>
         <div className='flex flex-col items-end'>
           <h1 className='font-bungee  text-lg'>5400 pts</h1>
           <h1 className='text-lg mt-1'>Rank: <span className='font-bungee  '>#42/352</span></h1>
@@ -85,7 +85,7 @@ const Header = () => {
         <div className='rounded-[50%]'>
            <img src={images.dp} alt="" className='w-16' />
         </div>
-      </div>
+      </Link>
     </header>
   )
 }
