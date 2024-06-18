@@ -43,7 +43,7 @@ body {
   z-index: -1;
   filter: blur(100px);
   height: 70%;
-  margin: auto; /* Adjust the value to extend the blur beyond the container edges */
+  margin: auto;
   }
 .bg_purple2::before {
   content: '';
@@ -56,7 +56,21 @@ body {
   z-index: -1;
   filter: blur(100px);
   height: 40%;
-  margin: auto; /* Adjust the value to extend the blur beyond the container edges */
+  margin: auto;
+  }
+  
+.bg_conic::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: conic-gradient(from 90deg at 50% 50%,  rgb(43, 132, 235) 20%, rgba(0,34,153,1) 55%, rgba(255, 104, 164, 1) 100%);
+  z-index: -1;
+  filter: blur(200px);
+  height: 50%;
+  margin: auto;
   }
 .bg_dog::before {
   content: '';
@@ -69,7 +83,7 @@ body {
   z-index: -1;
   filter: blur(100px);
   height: 70%;
-  margin: auto; /* Adjust the value to extend the blur beyond the container edges */
+  margin: auto;
   }
 .bg_pink::before {
   content: '';
@@ -81,7 +95,7 @@ body {
   background: #c140a1;
   z-index: -1;
   width: 80%;
-  height: 70%;
+  height: 50%;
   margin: auto;
   filter: blur(100px);
   }
@@ -123,6 +137,7 @@ body {
 
 ::-webkit-scrollbar {
   width: 7px;
+  
 }
 
 ::-webkit-scrollbar-thumb {
