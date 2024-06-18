@@ -151,11 +151,10 @@ const Home = () => {
           <LeaderBoardTable leaderboardLength={10} style={"bg_purple2"} all={true} date={false} />
         </div>
         <div className='border  z-[100] w-full xl:w-[45%] lg:w-[55%]  rounded-[30px] border-primary bg_glass lg:p-10 p-5 '>
-          <h1 className='font-bungee text-3xl'>Profile</h1>
+          <h1 className='font-bungee md:text-3xl text-xl'>Profile</h1>
           <div className='mt-8'>
           <ProfileCard username={"DipUser456"} profile_id={"1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71"} points={5400} rank={"#42/352"} like={2} message={0} profile={1} />
           </div>
-         
         </div>
       </div>
     </section>
