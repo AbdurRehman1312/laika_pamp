@@ -12,6 +12,7 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible"
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Link } from 'react-router-dom'
 const CreateToken = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const toggleCollapsible = () => setIsOpen(!isOpen);
@@ -97,9 +98,9 @@ const CreateToken = () => {
                   <div className='mt-5'>
                     <p className='italic md:text-xl text-sm text-gray-400 '>pamptoken is a token created on Laïka Network...</p>
                   </div>
-                  <div className='mt-3 flex justify-center'>
+                  <Link to={"/pamp"} className='mt-3 flex justify-center'>
                     <ButtonImage name={"pamp it"} />
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>

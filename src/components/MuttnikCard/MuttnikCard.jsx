@@ -2,6 +2,7 @@ import React from 'react'
 import * as images from "../../assets"
 import { Progress } from "@/components/ui/progress"
 import ButtonImage from '../ButtonImage/ButtonImage'
+import { Link } from 'react-router-dom'
 const MuttnikCard = ({ image, style, created_id, market, message, text, value_progress }) => {
     return (
         <>
@@ -28,9 +29,9 @@ const MuttnikCard = ({ image, style, created_id, market, message, text, value_pr
                 <div className='mt-5'>
                     <p className='italic md:text-xl text-sm text-gray-400 '>{text}</p>
                 </div>
-                <div className='mt-3 flex justify-center'>
+                <Link to={"/pamp"} className='mt-3 flex justify-center'>
                     <ButtonImage name={"pamp it"} />
-                </div>
+                </Link>
 
             </div>
         </>

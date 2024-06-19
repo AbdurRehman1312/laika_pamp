@@ -13,6 +13,7 @@ import Home from './pages/Home/Home.jsx';
 import CreateToken from './pages/CreateToken/CreateToken.jsx';
 import Leaderboard from './pages/Leaderboard/Leaderboard.jsx';
 import Profile from './pages/Profile/Profile.jsx';
+import PampIt from './pages/PampIt/PampIt.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
       <Route path="createtoken" element={<CreateToken />} />
       <Route path="leaderboard" element={<Leaderboard />} />
       <Route path="profile" element={<Profile />} />
+      <Route path="pamp" element={<PampIt />} />
     </Route>
   )
 );
