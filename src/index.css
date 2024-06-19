@@ -152,7 +152,10 @@ body {
   -webkit-backdrop-filter: blur(10px);
 }
 .bg_glass{
-  background: linear-gradient(rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.065));
+  background: linear-gradient(rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.045));
+}
+.bg_glass2{
+  background: linear-gradient(rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.09));
 }
 
 .custom_text {
