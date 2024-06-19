@@ -2,17 +2,17 @@ import React from 'react'
 import * as images from "../../assets"
 import ButtonImageP from '../ButtonImageP/ButtonImageP'
 import { Link } from 'react-router-dom'
-const ProfileCard = ({ username, profile_id, points, rank, like, message, profile }) => {
+const ProfileCard = ({ username, profile_id, points, rank, like, message, profile, image, style,style_2  }) => {
     return (
         <>
-            <div className='bg-[#050809]  rounded-3xl py-9 px-8'>
-                <div className='flex items-center gap-2'>
+            <div className={`  rounded-3xl py-9 px-8 ${style}`}>
+                <div className={`flex items-center  gap-2 ${style_2}`}>
                     <div className='rounded-[50%] flex-shrink-0'>
-                        <img src={images.dp} alt="" className='w-16' />
+                        <img src={image} alt="" className='w-16' />
                     </div>
                     <div className='flex flex-col '>
                         <h1 className='text-lg xl:text-xl font-medium'>{username}</h1>
-                        <p className='text-lg  custom_text2 mt-1 font-light'>{profile_id}</p>
+                        <p className='text-base xl:text-lg  custom_text2 mt-1 font-light'>{profile_id}</p>
                     </div>
                 </div>
 

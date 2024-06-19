@@ -23,6 +23,8 @@ import {
 } from "@/components/ui/carousel"
 
 const alpaTrumpCard = [{
+  text: "AlpaTrump",
+  symbol: "[$ALPT]",
   image: images.trump,
   created_id: "0xErd4512122",
   market: "550k",
@@ -31,6 +33,8 @@ const alpaTrumpCard = [{
   badge: true
 },
 {
+  text: "AlpaTrump",
+  symbol: "[$ALPT]",
   image: images.trump,
   created_id: "0xErd4512122",
   market: "550k",
@@ -39,30 +43,40 @@ const alpaTrumpCard = [{
   badge: true
 },
 {
+  text: "AlpaTrump",
+  symbol: "[$ALPT]",
   image: images.trump,
   created_id: "0xErd4512122",
   market: "550k",
   message: 3,
 },
 {
+  text: "AlpaTrump",
+  symbol: "[$ALPT]",
   image: images.trump,
   created_id: "0xErd4512122",
   market: "550k",
   message: 3,
 },
 {
+  text: "AlpaTrump",
+  symbol: "[$ALPT]",
   image: images.trump,
   created_id: "0xErd4512122",
   market: "550k",
   message: 3,
 },
 {
+  text: "AlpaTrump",
+  symbol: "[$ALPT]",
   image: images.trump,
   created_id: "0xErd4512122",
   market: "550k",
   message: 3,
 },
 {
+  text: "AlpaTrump",
+  symbol: "[$ALPT]",
   image: images.trump,
   created_id: "0xErd4512122",
   market: "550k",
@@ -75,6 +89,8 @@ const alpaTrumpCard = [{
   message: 3
 },
 {
+  text: "AlpaTrump",
+  symbol: "[$ALPT]",
   image: images.trump,
   created_id: "0xErd4512122",
   market: "550k",
@@ -87,12 +103,16 @@ const alpaTrumpCard = [{
   message: 3,
 },
 {
+  text: "AlpaTrump",
+  symbol: "[$ALPT]",
   image: images.trump,
   created_id: "0xErd4512122",
   market: "550k",
   message: 3,
 },
 {
+  text: "AlpaTrump",
+  symbol: "[$ALPT]",
   image: images.trump,
   created_id: "0xErd4512122",
   market: "550k",
@@ -188,7 +208,7 @@ const Home = () => {
           </div>
           <div className='grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 mt-10 w-full md:gap-7 gap-5 overflow-y-auto p-5 md:h-[90vh] h-[85vh] xl:h-[110vh]'>
             {alpaTrumpCard.map((item, index) => (
-              <AlpaTrumpCard key={index} image={item.image} created_id={item.created_id} market={item.market} message={item.message} style={item.style} badge={item.badge} value_progress={88} />
+              <AlpaTrumpCard text={item.text} symbol={item.symbol} key={index} image={item.image} created_id={item.created_id} market={item.market} message={item.message} style={item.style} badge={item.badge} value_progress={88} />
             ))}
           </div>
         </div>
@@ -200,7 +220,7 @@ const Home = () => {
         <div className='border  z-[100] w-full xl:w-[45%] lg:w-[55%]  rounded-[30px] border-primary bg_glass lg:p-10 p-5 '>
           <h1 className='font-bungee md:text-3xl text-xl'>Profile</h1>
           <div className='mt-8'>
-            <ProfileCard username={"DipUser456"} profile_id={"1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71"} points={5400} rank={"#42/352"} like={2} message={0} profile={1} />
+            <ProfileCard image={images.dp} username={"DipUser456"} profile_id={"1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71"} points={5400} rank={"#42/352"} like={2} message={0} profile={1} style={"bg-[#050809]"} />
           </div>
         </div>
       </div>

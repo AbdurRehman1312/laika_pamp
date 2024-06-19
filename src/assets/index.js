@@ -18,3 +18,4 @@ export {default as tokenimg} from './tokenimg.png';
 export {default as crossSlide} from './crossSlide.png';
 export {default as nextSlide} from './nextSlide.png';
 export {default as globe} from './globe.png';
+export {default as edit} from './edit.png';

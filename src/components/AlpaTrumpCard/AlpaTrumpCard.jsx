@@ -3,7 +3,7 @@ import * as images from "../../assets"
 import { Progress } from "@/components/ui/progress"
 import ButtonRocket from '../ButtonRocket/ButtonRocket'
 
-const AlpaTrumpCard = ({ image, style, created_id, market, message, badge = false, value_progress}) => {
+const AlpaTrumpCard = ({ text, symbol, image, style, created_id, market, message, badge = false, value_progress}) => {
     return (
         <>
             <div className={`w-full m-auto bg_header relative bg_black_gradient mt-5 z-40 rounded-[30px] py-6 px-8 ${style}`}>
@@ -12,7 +12,7 @@ const AlpaTrumpCard = ({ image, style, created_id, market, message, badge = fals
                         <img src={image} alt="" className='lg:w-24 w-16 object-cover' />
                     </div>
                     <div className='flex flex-col gap-1'>
-                        <h1 className='md:text-2xl text-lg text-white font-medium'>AlpaTrump <span className='text-[#e9e8ea] font-light'>[$ALPT]</span></h1>
+                        <h1 className='md:text-2xl text-lg text-white font-medium'>{text} <span className='text-[#e9e8ea] font-light'>{symbol}</span></h1>
                         <div className='flex items-center gap-1'><p className='md:text-xl text-sm text-[#e9e8ea] '>created by </p><p className='font-semibold text-white md:text-xl text-sm custom_text'>{created_id}</p></div>
                         <p className='lg:text-xl text-sm text-[#e9e8ea]'>market cap: <span className='font-semibold text-white'>{market}</span></p>
                     </div>
@@ -27,7 +27,7 @@ const AlpaTrumpCard = ({ image, style, created_id, market, message, badge = fals
                             <p className='text-white font-medium text-sm md:text-base'>{message}</p>
                         </div>
                         <div>
-                            <ButtonRocket />
+                            <ButtonRocket style={"bg-black"}/>
                         </div>
                     </div>
                 </div>
