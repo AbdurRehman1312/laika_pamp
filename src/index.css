@@ -164,6 +164,12 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.custom_text2 {
+  width: 8.5ch; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 ::-webkit-scrollbar {
   width: 7px;
@@ -182,4 +188,12 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+}
+iframe{
+  border-radius: 40px !important;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

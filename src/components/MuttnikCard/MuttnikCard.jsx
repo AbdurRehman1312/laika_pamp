@@ -12,7 +12,7 @@ const MuttnikCard = ({ image, style, created_id, market, message, text, value_pr
                         <img src={image} alt="" className='w-24 h-24' />
                     </div>
                     <div className='flex flex-col gap-1'>
-                        <h1 className='md:text-2xl text-lg text-white font-medium'>Muttnik the dog <span className='text-[#e9e8ea] font-light'>[MUTT]</span></h1>
+                        <h1 className='md:text-2xl text-lg text-white font-medium'>Muttnik the dog <span className='text-[#e9e8ea] font-light'>[$MUTT]</span></h1>
                         <div className='flex items-center gap-1'><p className='md:text-xl text-sm text-[#e9e8ea] '>created by </p><p className='font-semibold text-white md:text-xl text-sm custom_text'>{created_id}</p></div>
                         <p className='md:text-xl text-sm text-[#e9e8ea]'>market cap: <span className='font-semibold text-white'>{market}</span></p>
                     </div>
