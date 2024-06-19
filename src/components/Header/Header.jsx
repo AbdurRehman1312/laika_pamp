@@ -33,14 +33,10 @@ const Header = () => {
       <header className='flex'>
         <div className=' bg_header flex justify-between md:gap-5 lg:gap-3 xl:gap-0 py-2 px-2 md:px-3 lg:px-1 xl:px-2 items-center xl:w-[84%] lg:w-[85%] md:w-[70%] w-full'>
           <div className='flex gap-5 md:gap-5 lg:gap-4 xl:gap-10 items-center'>
-            <div className='flex items-center '>
-              <NavLink to="/" >
-                <img src={images.logo} alt="" className='w-16 md:w-16 lg:w-28 xl:w-16' />
-              </NavLink>
-              <div>
-                <h1 className='font-bungee md:text-2xl xl:text-3xl text-xl'>DIP.DOG</h1>
-              </div>
-            </div>
+            <NavLink to="/" className='flex items-center ' >
+              <img src={images.logo} alt="" className='w-16 md:w-16 lg:w-28 xl:w-16' />
+              <h1 className='font-bungee md:text-2xl xl:text-3xl text-xl'>DIP.DOG</h1>
+            </NavLink>
             <div className='flex items-center gap-5 '>
               <Link to="/" ><img src={images.x} alt="" className='w-5 md:w-4 lg:w-7 xl:w-4' /></Link>
               <Link to="/" ><img src={images.telegram} alt="" className='w-5 md:w-4 lg:w-7 xl:w-4' /></Link>
@@ -122,15 +118,15 @@ const Header = () => {
                     <ButtonTextP name="Connect Wallet" style={" p-3 "} />
                   </li>
                 </ul>
-                <Link to={"/profile"} className='bg-[#37405a]  md:hidden flex justify-center gap-3 mt-3 p-3 rounded-xl '>
-                      <div className='flex flex-col items-end'>
-                        <h1 className='font-bungee  text-lg text-nowrap'>5400 pts</h1>
-                        <h1 className='text-lg mt-1 xl:text-nowrap'>Rank: <span className='font-bungee  '>#42/352</span></h1>
-                      </div>
-                      <div className='rounded-[50%]'>
-                        <img src={images.dp} alt="" className='w-16' />
-                      </div>
-                    </Link>
+                <Link to={"/profile"} onClick={() => setToggle(false)} className='bg-[#37405a]  md:hidden flex justify-center gap-3 mt-3 p-3 rounded-xl '>
+                  <div className='flex flex-col items-end'>
+                    <h1 className='font-bungee  text-lg text-nowrap'>5400 pts</h1>
+                    <h1 className='text-lg mt-1 xl:text-nowrap'>Rank: <span className='font-bungee  '>#42/352</span></h1>
+                  </div>
+                  <div className='rounded-[50%]'>
+                    <img src={images.dp} alt="" className='w-16' />
+                  </div>
+                </Link>
               </div>
             </div>
           )}
