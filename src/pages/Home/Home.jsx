@@ -1,6 +1,7 @@
 import MuttnikCard from '@/components/MuttnikCard/MuttnikCard'
 import React from 'react'
 import * as images from "../../assets"
+import { Button } from '@/components/ui/button'
 import ButtonTextImageP from '@/components/ButtonTextImageP/ButtonTextImageP'
 import ButtonImageP from '@/components/ButtonImageP/ButtonImageP'
 import LeaderBoardTable from '@/components/LeaderBoardTable/LeaderBoardTable'
@@ -14,6 +15,15 @@ import {
 import AlpaTrumpCard from '@/components/AlpaTrumpCard/AlpaTrumpCard'
 import ProfileCard from '@/components/ProfileCard/ProfileCard'
 import TokenCard from '@/components/TokenCard/TokenCard'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 import {
   Carousel,
   CarouselContent,
@@ -120,19 +130,17 @@ const alpaTrumpCard = [{
 }
 ]
 const Home = () => {
+  const [position, setPosition] = React.useState("enable")
   return (
     <section className='container mx-auto my-10 lg:px-0 px-2'>
-      <div className='flex lg:flex-row flex-col items-center gap-4 justify-between my-16'>
-        <div className='relative bg_dog border z-[100] w-full xl:w-[40%] lg:w-[50%] md:w-[70%] rounded-[30px] border-primary lg:p-10 p-5'>
+      <div className='flex lg:flex-row flex-col items-stretch gap-4 justify-between my-16'>
+        <div className='relative bg_dog border z-[100] w-full xl:w-[40%] lg:w-[50%] md:w-[100%] rounded-[30px] border-primary lg:p-10 p-5'>
           <h1 className='font-bungee md:text-3xl text-xl'>DOG OF THE DAY</h1>
           <div className='md:w-[90%] w-full m-auto lg:my-8 xl:my-16 my-0'>
             <MuttnikCard image={images.astrodog} created_id={"0xErd4512122"} market={"550k"} message={3} text="Lorem ipsum dolor si amet. Lorem ipsum dolor si amet Lorem ipsum dolor si amet. Lorem ipsum dolor si amet" value_progress={88} />
           </div>
-          <div className='absolute bg-secondary rounded-lg md:px-7 px-5 py-1 top-12 md:top-14 lg:top-32 right-1 lg:right-10'>
-            <h1 className='font-bungee md:text-2xl text-lg text-white'>#1</h1>
-          </div>
         </div>
-        <div className='relative bg_pink border z-[100] w-full xl:w-[55%] lg:w-[50%] md:w-[55%] rounded-[30px] border-primary bg_glass lg:p-10 p-5 '>
+        <div className='relative bg_pink border z-[100] w-full xl:w-[55%] lg:w-[50%] md:w-[100%] rounded-[30px] border-primary bg_glass lg:p-10 p-5 '>
           <h1 className='font-bungee md:text-3xl text-xl'>Token Matcher</h1>
           <Carousel>
             <CarouselContent>
@@ -180,7 +188,19 @@ const Home = () => {
           <div className='flex justify-between lg:flex-row flex-col items-center mt-5 lg:gap-16 gap-6 '>
             <div className='flex items-center gap-4'>
               <ButtonTextImageP name="favourite" image={images.heart} />
-              <ButtonImageP image={images.gear} />
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button className="bg-[#4563ff] md:p-4 p-3 md:rounded-xl rounded-md">
+                    <img src={images.gear} alt="" className='md:w-6 w-5' />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-64">
+                  <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
+                    <DropdownMenuRadioItem value="enable">Enable tokens with a suspicious holder repartition (enabled as standard)</DropdownMenuRadioItem>
+                    <DropdownMenuRadioItem value="disable">Disable token pop animation (enabled as standard)</DropdownMenuRadioItem>
+                  </DropdownMenuRadioGroup>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
             <div className='flex flex-1 items-center gap-4'>
               <input type="text" className='w-full bg-black appearance-none border-0 md:text-lg text-sm focus:outline-none md:p-4 p-2.5 md:rounded-[15px] rounded-md' placeholder='pamptoken...' />
@@ -206,7 +226,7 @@ const Home = () => {
               </Select>
             </div>
           </div>
-          <div className='grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 mt-10 w-full md:gap-7 gap-5 overflow-y-auto p-5 md:h-[90vh] h-[85vh] xl:h-[110vh]'>
+          <div className='grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 mt-10 w-full gap-2 overflow-y-auto p-5 md:h-[90vh] h-[85vh] xl:h-[100vh]'>
             {alpaTrumpCard.map((item, index) => (
               <AlpaTrumpCard text={item.text} symbol={item.symbol} key={index} image={item.image} created_id={item.created_id} market={item.market} message={item.message} style={item.style} badge={item.badge} value_progress={88} />
             ))}

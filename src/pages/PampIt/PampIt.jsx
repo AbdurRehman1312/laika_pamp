@@ -207,9 +207,9 @@ const PampIt = () => {
                             ))}
                             <div className='relative'>
                                 <Input type="text" id="comment" placeholder="Write a comment" className="bg_glass2 mt-3 border-0 md:text-lg text-base rounded-[10px] py-8 placeholder:px-10 w-full" />
-                                <div className='flex items-center gap-2 absolute md:top-[25%] top-[28%] right-3'>
-                                    <ButtonImageP image={images.arrowr} style={"w-[40px] md:p-2 md:py-3 flex justify-center "} />
-                                </div>
+
+                                    <ButtonImageP image={images.arrowr} style={"w-[40px] md:p-2 md:py-3 flex justify-center absolute md:top-[30%] top-[28%] right-3 "} />
+
                                 <div className='flex items-center gap-2 absolute top-[38%] left-3'>
                                     <img src={images.userdp} alt="" className='w-8' />
                                 </div>

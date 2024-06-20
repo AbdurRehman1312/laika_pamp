@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const MuttnikCard = ({ image, style, created_id, market, message, text, value_progress }) => {
     return (
         <>
-            <div className={`w-full m-auto bg_header  bg_black_gradient mt-5 rounded-[30px] py-6 px-8 ${style}`}>
+            <div className={`w-full m-auto bg_header relative bg_black_gradient mt-5 rounded-[30px] py-6 px-8 ${style}`}>
                 <div className='flex items-start gap-5 '>
                     <div className='rounded-2xl flex-shrink-0'>
                         <img src={image} alt="" className='w-24 h-24' />
@@ -32,7 +32,9 @@ const MuttnikCard = ({ image, style, created_id, market, message, text, value_pr
                 <Link to={"/pamp"} className='mt-3 flex justify-center'>
                     <ButtonImage name={"pamp it"} />
                 </Link>
-
+                <div className='absolute bg-secondary rounded-lg md:px-7 px-5 py-1 top-[-15px] md:right-[-20px] right-[-10px]'>
+                    <h1 className='font-bungee md:text-2xl text-lg text-white'>#1</h1>
+                </div>
             </div>
         </>
     )

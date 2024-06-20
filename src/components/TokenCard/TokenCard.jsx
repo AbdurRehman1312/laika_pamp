@@ -3,7 +3,7 @@ import * as images from "../../assets"
 import { Progress } from '../ui/progress'
 const TokenCard = () => {
     return (
-        <div className='bg_black_gradient lg:w-[50%] xl:w-[40%] w-full rounded-[15px] m-auto mt-6'>
+        <div className='bg_black_gradient md:w-[50%] xl:w-[40%] w-full rounded-[15px] m-auto mt-6'>
             <div className=''>
                 <img src={images.tokenimg} alt="" className='h-[100%] w-full rounded-t-[15px] object-cover ' />
             </div>
