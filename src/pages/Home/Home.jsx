@@ -138,13 +138,13 @@ const Home = () => {
   return (
     <section className='container mx-auto my-10 lg:px-0 px-2'>
       <div className='flex lg:flex-row flex-col gap-16 justify-between my-16'>
-        <div className='relative bg_dog border z-[100] w-full basis-full xl:w-[40%] lg:w-[50%] md:w-[100%] rounded-[30px] border-primary lg:p-10 p-5'>
+        <div className='relative bg_dog border z-[100] w-full basis-full xl:w-[53%] lg:w-[50%] md:w-[100%] rounded-[30px] border-primary lg:p-10 p-5'>
           <h1 className='font-bungee md:text-3xl text-xl'>DOG OF THE DAY</h1>
           <div className='md:w-[90%] w-full m-auto lg:my-8 xl:my-16 my-0'>
             <MuttnikCard image={images.astrodog} created_id={"0xErd4512122"} market={"550k"} message={3} text="Lorem ipsum dolor si amet. Lorem ipsum dolor si amet Lorem ipsum dolor si amet. Lorem ipsum dolor si amet" value_progress={88} />
           </div>
         </div>
-        <div className='relative bg_pink border z-[100] basis-full w-full xl:w-[55%] lg:w-[50%] md:w-[100%] rounded-[30px] border-primary bg_glass lg:p-10 p-5 '>
+        <div className='relative bg_pink border z-[100] basis-full w-full xl:w-[47%] lg:w-[50%] md:w-[100%] rounded-[30px] border-primary bg_glass lg:p-10 p-5 '>
           <h1 className='font-bungee md:text-3xl text-xl'>Token Matcher</h1>
           <Carousel>
             <CarouselContent>
@@ -178,7 +178,7 @@ const Home = () => {
               <CarouselPrevious className="" />
               <p className='font-bungee mt-2'>FUCK NO.</p>
             </div>
-            <div className='absolute top-[40%] lg:right-[-10px] xl:right-[5%] lg:flex hidden flex-col items-center'>
+            <div className='absolute top-[40%] lg:right-[-10px] xl:right-[1%] lg:flex hidden flex-col items-center'>
               <CarouselNext />
               <p className='font-bungee mt-2'>Yes Please!</p>
             </div>
