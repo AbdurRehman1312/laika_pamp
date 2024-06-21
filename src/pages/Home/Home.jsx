@@ -93,6 +93,8 @@ const alpaTrumpCard = [{
   message: 3,
 },
 {
+  text: "AlpaTrump",
+  symbol: "[$ALPT]",
   image: images.trump,
   created_id: "0xErd4512122",
   market: "550k",
@@ -107,6 +109,8 @@ const alpaTrumpCard = [{
   message: 3,
 },
 {
+  text: "AlpaTrump",
+  symbol: "[$ALPT]",
   image: images.trump,
   created_id: "0xErd4512122",
   market: "550k",
@@ -226,7 +230,7 @@ const Home = () => {
               </Select>
             </div>
           </div>
-          <div className='grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 mt-10 w-full gap-2 overflow-y-auto p-5 md:h-[90vh] h-[85vh] xl:h-[100vh]'>
+          <div className='grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 mt-10 w-full gap-x-5 overflow-y-auto p-5 md:h-[90vh] h-[85vh] xl:h-[100vh]'>
             {alpaTrumpCard.map((item, index) => (
               <AlpaTrumpCard text={item.text} symbol={item.symbol} key={index} image={item.image} created_id={item.created_id} market={item.market} message={item.message} style={item.style} badge={item.badge} value_progress={88} />
             ))}
