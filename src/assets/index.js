@@ -26,3 +26,4 @@ export {default as laika} from './laika.png';
 export {default as muttman} from './muttman.png';
 export {default as userdp} from './userdp.png';
 export {default as likeheart} from './likeheart.png';
+export {default as loadingAnimation} from './loadingAnimation.gif';

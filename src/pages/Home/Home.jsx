@@ -133,14 +133,14 @@ const Home = () => {
   const [position, setPosition] = React.useState("enable")
   return (
     <section className='container mx-auto my-10 lg:px-0 px-2'>
-      <div className='flex lg:flex-row flex-col items-stretch gap-4 justify-between my-16'>
-        <div className='relative bg_dog border z-[100] w-full xl:w-[40%] lg:w-[50%] md:w-[100%] rounded-[30px] border-primary lg:p-10 p-5'>
+      <div className='flex lg:flex-row flex-col gap-16 justify-between my-16'>
+        <div className='relative bg_dog border z-[100] w-full basis-full xl:w-[40%] lg:w-[50%] md:w-[100%] rounded-[30px] border-primary lg:p-10 p-5'>
           <h1 className='font-bungee md:text-3xl text-xl'>DOG OF THE DAY</h1>
           <div className='md:w-[90%] w-full m-auto lg:my-8 xl:my-16 my-0'>
             <MuttnikCard image={images.astrodog} created_id={"0xErd4512122"} market={"550k"} message={3} text="Lorem ipsum dolor si amet. Lorem ipsum dolor si amet Lorem ipsum dolor si amet. Lorem ipsum dolor si amet" value_progress={88} />
           </div>
         </div>
-        <div className='relative bg_pink border z-[100] w-full xl:w-[55%] lg:w-[50%] md:w-[100%] rounded-[30px] border-primary bg_glass lg:p-10 p-5 '>
+        <div className='relative bg_pink border z-[100] basis-full w-full xl:w-[55%] lg:w-[50%] md:w-[100%] rounded-[30px] border-primary bg_glass lg:p-10 p-5 '>
           <h1 className='font-bungee md:text-3xl text-xl'>Token Matcher</h1>
           <Carousel>
             <CarouselContent>
