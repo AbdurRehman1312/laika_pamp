@@ -31,7 +31,8 @@ const Header = () => {
   return (
     <>
       <header className='flex'>
-        <div className=' bg_header flex justify-between md:gap-5 lg:gap-3 xl:gap-0 py-2 px-2 md:px-3 lg:px-1 xl:px-2 items-center xl:w-[84%] lg:w-[85%] md:w-[70%] w-full'>
+        {/* <div className=' bg_header flex justify-between md:gap-5 lg:gap-3 xl:gap-0 py-2 px-2 md:px-3 lg:px-1 xl:px-2 items-center xl:w-[84%] lg:w-[85%] md:w-[70%] w-full'> */}
+        <div className=' bg_header flex justify-between md:gap-5 lg:gap-3 xl:gap-0 py-2 px-2 md:px-3 lg:px-1 xl:px-2 items-center w-full'>
           <div className='flex gap-5 md:gap-5 lg:gap-4 xl:gap-10 items-center'>
             <NavLink to="/" className='flex items-center ' >
               <img src={images.logo} alt="" className='w-16 md:w-16 lg:w-28 xl:w-16' />
@@ -118,11 +119,12 @@ const Header = () => {
                     <ButtonTextP name="Connect Wallet" style={" p-3 "} />
                   </li>
                 </ul>
-                <Link to={"/profile"} onClick={() => setToggle(false)} className='bg-[#37405a]  md:hidden flex justify-center gap-3 mt-3 p-3 rounded-xl '>
-                  <div className='flex flex-col items-end'>
+                {/* <Link to={"/profile"} onClick={() => setToggle(false)} className='bg-[#37405a]  md:hidden flex justify-center gap-3 mt-3 p-3 rounded-xl '> */}
+                <Link to={"/profile"} onClick={() => setToggle(false)} className=' w-[30%] mx-auto md:hidden flex justify-center gap-3 mt-3 p-3 rounded-xl '>
+                  {/* <div className='flex flex-col items-end'>
                     <h1 className='font-bungee  text-lg text-nowrap'>5400 pts</h1>
                     <h1 className='text-lg mt-1 xl:text-nowrap'>Rank: <span className='font-bungee  '>#42/352</span></h1>
-                  </div>
+                  </div> */}
                   <div className='rounded-[50%]'>
                     <img src={images.dp} alt="" className='w-16' />
                   </div>
@@ -131,11 +133,12 @@ const Header = () => {
             </div>
           )}
         </div>
-        <Link to={"/profile"} className='bg-[#37405a] xl:w-[16%] lg:w-[15%] md:w-[30%] hidden md:flex xl:gap-5 md:gap-4  md:px-2 xl:px-0 lg:items-center lg:justify-center py-2 '>
-          <div className='flex flex-col items-end'>
+        {/* <Link to={"/profile"} className='bg-[#37405a] xl:w-[16%] lg:w-[15%] md:w-[30%] hidden md:flex xl:gap-5 md:gap-4  md:px-2 xl:px-0 lg:items-center lg:justify-center py-2 '> */}
+        <Link to={"/profile"} className='bg-[#37405a] xl:w-[6%] lg:w-[8%] md:w-[9%] hidden md:flex xl:gap-5 md:gap-4  md:px-2 xl:px-0 lg:items-center lg:justify-center py-2 '>
+          {/* <div className='flex flex-col items-end'>
             <h1 className='font-bungee text-lg lg:text-base xl:text-lg text-nowrap'>5400 pts</h1>
             <h1 className='text-lg lg:text-base xl:text-lg mt-1 xl:text-nowrap'>Rank: <span className='font-bungee  '>#42/352</span></h1>
-          </div>
+          </div> */}
           <div className='rounded-[50%]'>
             <img src={images.dp} alt="" className='w-16' />
           </div>

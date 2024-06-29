@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as images from "../../assets"
 import { Input } from "@/components/ui/input"
 import { Link } from 'react-router-dom';
@@ -24,6 +24,34 @@ const comments = [
     },
 ]
 const PampIt = () => {
+    const holders = [
+        { address: '0xErd45...', percentage: 36 },
+        { address: '0xErd45...', percentage: 23 },
+        { address: '0xErd45...', percentage: 12 },
+        { address: '0xErd45...', percentage: 36 },
+        { address: '0xErd45...', percentage: 23 },
+        { address: '0xErd45...', percentage: 12 },
+        { address: '0xErd45...', percentage: 36 },
+        { address: '0xErd45...', percentage: 23 },
+        { address: '0xErd45...', percentage: 12 },
+        { address: '0xErd45...', percentage: 36 },
+        { address: '0xErd45...', percentage: 23 },
+        { address: '0xErd45...', percentage: 12 },
+    ];
+
+    // State to manage visibility of additional holder items
+    const [visibleItems, setVisibleItems] = useState(9);
+
+    // Function to show more items
+    const showMoreItems = () => {
+        setVisibleItems(holders.length); // Set visible items to the total length of holders
+    };
+
+    // Function to show less items
+    const showLessItems = () => {
+        setVisibleItems(9); // Reset visible items to initial state
+    };
+
     React.useEffect(() => {
         const container = document.querySelector(".tradingview-widget-container__widget");
         let isScriptLoaded = container.querySelector("script");
@@ -145,56 +173,17 @@ const PampIt = () => {
                         <div className='mt-5'>
                             <p className='text-end'>distribution sniffer: <span className='text-[#99FF75]'>seems pretty fair</span></p>
                         </div>
-                        <ol className='md:h-[60px] flex flex-col justify-center md:items-center px-4 md:px-0 md:flex-wrap list-decimal mt-5'>
-                            <li className=' '>
-                                <div className='flex items-center gap-10'><p className='font-semibold text-white  text-sm custom_text2'> 0xErd45...</p>
-                                    <p>36%</p>
+                        <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mt-5'>
+                            {holders.slice(0, visibleItems).map((holder, index) => (
+                                <div key={index} className='flex justify-between items-center p-2'>
+                                    <p className='text-white custom_text2'>{index + 1}. {holder.address} {holder.percentage}%</p>
+                                    <p>{holder.percentage}%</p>
                                 </div>
-                            </li>
-                            <li className=''>
-                                <div className='flex items-center gap-10'><p className='font-semibold text-white  text-sm custom_text2'> 0xErd45...</p>
-                                    <p>23%</p>
-                                </div>
-                            </li>
-                            <li className=''>
-                                <div className='flex items-center gap-10'><p className='font-semibold text-white  text-sm custom_text2'> 0xErd45...</p>
-                                    <p>12%</p>
-                                </div>
-                            </li>
-                            <li className=' l'>
-                                <div className='flex items-center gap-10'><p className='font-semibold text-white  text-sm custom_text2'> 0xErd45...</p>
-                                    <p>36%</p>
-                                </div>
-                            </li>
-                            <li className=''>
-                                <div className='flex items-center gap-10'><p className='font-semibold text-white  text-sm custom_text2'> 0xErd45...</p>
-                                    <p>23%</p>
-                                </div>
-                            </li>
-                            <li className=''>
-                                <div className='flex items-center gap-10'><p className='font-semibold text-white  text-sm custom_text2'> 0xErd45...</p>
-                                    <p>12%</p>
-                                </div>
-                            </li>
-                            <li className=' l'>
-                                <div className='flex items-center gap-10'><p className='font-semibold text-white  text-sm custom_text2'> 0xErd45...</p>
-                                    <p>36%</p>
-                                </div>
-                            </li>
-                            <li className=''>
-                                <div className='flex items-center gap-10'><p className='font-semibold text-white  text-sm custom_text2'> 0xErd45...</p>
-                                    <p>23%</p>
-                                </div>
-                            </li>
-                            <li className=''>
-                                <div className='flex items-center gap-10'><p className='font-semibold text-white  text-sm custom_text2'> 0xErd45...</p>
-                                    <p>12%</p>
-                                </div>
-                            </li>
-                        </ol>
-                        <Link className="text-gray-300 text-sm underline text-center flex justify-center mt-5">
-                            See more
-                        </Link>
+                            ))}
+                        </div>
+                        <button onClick={visibleItems > 9 ? showLessItems : showMoreItems} className='text-gray-300 mx-auto underline text-center block mt-4'>
+                            {visibleItems > 9 ? 'See Less' : 'See More'}
+                        </button>
                     </div>
                     <div className=' bg_glass border z-[100] md:rounded-[40px] rounded-[30px] border-primary lg:p-10 p-5'>
                         <div className='flex justify-between items-center'>
