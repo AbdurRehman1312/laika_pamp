@@ -237,7 +237,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className='flex lg:flex-row flex-col items-start gap-4 justify-between'>
+      {/* <div className='flex lg:flex-row flex-col items-start gap-4 justify-between'>
         <div className='relative w-full xl:w-[50%] lg:w-[45%]'>
           <LeaderBoardTable leaderboardLength={10} style={"bg_purple2"} all={true} date={false} />
         </div>
@@ -247,7 +247,7 @@ const Home = () => {
             <ProfileCard image={images.dp} username={"DipUser456"} profile_id={"1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71"} points={5400} rank={"#42/352"} like={2} message={0} profile={1} style={"bg-[#050809]"} />
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   )
 }
