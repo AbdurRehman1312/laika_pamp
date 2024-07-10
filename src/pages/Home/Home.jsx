@@ -250,7 +250,7 @@ const Home = () => {
           <div className='border  z-[100] w-full   rounded-[30px] border-primary bg_glass lg:p-10 p-5 '>
             <h1 className='font-bungee md:text-3xl text-xl'>Profile</h1>
             <div className='mt-8'>
-              <ProfileCard image={images.dp} username={"DipUser456"} profile_id={"1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71"} points={5400} rank={"#42/352"} like={2} message={0} profile={1} style={"bg-[#050809]"} />
+              <ProfileCard image={images.dp} username={"DipUser456"} profile_id={"1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71"} points={5400} rank={"#42/352"} like={2} message={0} profile={1} style={"bg-[#050809] mx-auto md:w-[70%]"} />
             </div>
           </div>
           <div className='border z-[100] w-full rounded-[30px] border-primary bg_glass lg:px-10 p-5 '>
