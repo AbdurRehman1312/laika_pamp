@@ -14,13 +14,14 @@ import {
 } from "@/components/ui/select"
 import AlpaTrumpCard from '@/components/AlpaTrumpCard/AlpaTrumpCard'
 import ProfileCard from '@/components/ProfileCard/ProfileCard'
+import DipperCard from '@/components/DipperCard/DipperCard'
 import TokenCard from '@/components/TokenCard/TokenCard'
+
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuLabel,
-  DropdownMenuRadioGroup,
-  DropdownMenuRadioItem,
+  DropdownMenuCheckboxItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
@@ -87,7 +88,7 @@ const alpaTrumpCard = [{
 {
   text: "AlpaTrump",
   symbol: "[$ALPT]",
-  image: images.trump,
+  image: images.tweet,
   created_id: "0xErd4512122",
   market: "550k",
   message: 3,
@@ -134,7 +135,8 @@ const alpaTrumpCard = [{
 }
 ]
 const Home = () => {
-  const [position, setPosition] = React.useState("enable")
+  const [Enable, setEnable] = React.useState(true)
+  const [UnEnable, setUnEnable] = React.useState(false)
   return (
     <section className='container mx-auto my-10 lg:px-0 px-2'>
       <div className='flex lg:flex-row flex-col gap-16 justify-between my-16'>
@@ -149,19 +151,19 @@ const Home = () => {
           <Carousel>
             <CarouselContent>
               <CarouselItem>
-                <TokenCard />
+                <TokenCard img={images.tokenimg} />
               </CarouselItem>
               <CarouselItem>
-                <TokenCard />
+                <TokenCard img={images.tokenimg} />
               </CarouselItem>
               <CarouselItem>
-                <TokenCard />
+                <TokenCard img={images.tokenimg} />
               </CarouselItem>
               <CarouselItem>
-                <TokenCard />
+                <TokenCard img={images.tokenimg} />
               </CarouselItem>
               <CarouselItem>
-                <TokenCard />
+                <TokenCard img={images.tweet} />
               </CarouselItem>
             </CarouselContent>
             <div className='flex lg:hidden justify-center items-center gap-3 mt-5'>
@@ -199,10 +201,12 @@ const Home = () => {
                   </button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-64">
-                  <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
-                    <DropdownMenuRadioItem value="enable">Enable tokens with a suspicious holder repartition (enabled as standard)</DropdownMenuRadioItem>
-                    <DropdownMenuRadioItem value="disable">Disable token pop animation (enabled as standard)</DropdownMenuRadioItem>
-                  </DropdownMenuRadioGroup>
+                  
+                    <DropdownMenuCheckboxItem  checked={Enable}
+          onCheckedChange={setEnable} >Enable tokens with a suspicious holder repartition (enabled as standard)</DropdownMenuCheckboxItem>
+                    <DropdownMenuCheckboxItem checked={UnEnable}
+          onCheckedChange={setUnEnable}>Disable token pop animation (enabled as standard)</DropdownMenuCheckboxItem>
+
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>
@@ -217,7 +221,7 @@ const Home = () => {
                 </SelectTrigger>
                 <SelectContent className="bg-[#4563ff] border-0 z-50">
                   <SelectItem value="pamp order">sort: pamp order</SelectItem>
-                  <SelectItem value="r">sort: pamp order</SelectItem>
+                  <SelectItem value="r">sort: latest release</SelectItem>
                 </SelectContent>
               </Select>
               <Select className="z-30">
@@ -230,24 +234,37 @@ const Home = () => {
               </Select>
             </div>
           </div>
-          <div className='grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 mt-10 w-full gap-x-5 overflow-y-auto p-5 md:h-[90vh] h-[85vh] xl:h-[100vh]'>
+          <div className='grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 mt-16 w-full gap-x-5 overflow-y-auto p-5 md:h-[90vh] h-[85vh] xl:h-[100vh]'>
             {alpaTrumpCard.map((item, index) => (
               <AlpaTrumpCard text={item.text} symbol={item.symbol} key={index} image={item.image} created_id={item.created_id} market={item.market} message={item.message} style={item.style} badge={item.badge} value_progress={88} />
             ))}
           </div>
         </div>
       </div>
-      {/* <div className='flex lg:flex-row flex-col items-start gap-4 justify-between'>
-        <div className='relative w-full xl:w-[50%] lg:w-[45%]'>
+      <div className='flex lg:flex-row flex-col lg:items-start gap-4 justify-between'>
+        <div className='relative w-full xl:w-[40%] lg:w-[35%]'>
           <LeaderBoardTable leaderboardLength={10} style={"bg_purple2"} all={true} date={false} />
         </div>
-        <div className='border  z-[100] w-full xl:w-[45%] lg:w-[55%]  rounded-[30px] border-primary bg_glass lg:p-10 p-5 '>
+        <div className='xl:w-[57%] lg:w-[65%] flex flex-col gap-4'>
+        <div className='border  z-[100] w-full   rounded-[30px] border-primary bg_glass lg:p-10 p-5 '>
           <h1 className='font-bungee md:text-3xl text-xl'>Profile</h1>
           <div className='mt-8'>
             <ProfileCard image={images.dp} username={"DipUser456"} profile_id={"1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71"} points={5400} rank={"#42/352"} like={2} message={0} profile={1} style={"bg-[#050809]"} />
           </div>
         </div>
-      </div> */}
+        <div className='border  z-[100] w-full   rounded-[30px] border-primary bg_glass lg:p-10 p-5 '>
+          <h1 className='font-bungee md:text-3xl text-xl'>TOP 3 DIPPERS</h1>
+          <div className='mt-8 flex flex-col md:flex-row justify-center lg:justify-start 2xl:justify-center  items-center w-full gap-10'>
+            <DipperCard image={images.dp} username={"DipUser456"} profile_id={"1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71"} points={5400} rank={"#42/352"} like={2} message={0} profile={1} style={"bg-[#050809] xl:w-[47vh] border border-secondary border-4"} style_3={"bg-secondary"} badge={"#1"}/>
+            <div className='flex flex-col items-start gap-10 md:gap-12'>
+            <DipperCard image={images.dp} username={"DipUser456"} profile_id={"1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71"} points={5400} rank={"#42/352"} like={2} message={0} profile={1} style={"bg-[#050809] xl:w-[45vh] border border-[#bf80ff] border-4"} style_3={"bg-[#bf80ff]"} badge={"#2"}/>
+            <DipperCard image={images.dp} username={"DipUser456"} profile_id={"1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71"} points={5400} rank={"#42/352"} like={2} message={0} profile={1} style={"bg-[#050809] xl:w-[40vh] border border-[#4563ff] border-4"} style_3={"bg-[#4563ff]"} badge={"#3"}/>
+            </div>
+          </div>
+        </div>
+        </div>
+       
+      </div>
     </section>
   )
 }

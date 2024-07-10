@@ -1,11 +1,11 @@
 import React from 'react'
 import * as images from "../../assets"
 import { Progress } from '../ui/progress'
-const TokenCard = () => {
+const TokenCard = ({img}) => {
     return (
         <div className='bg_black_gradient md:w-[50%] xl:w-[50%] w-full rounded-[15px] m-auto mt-6'>
-            <div className=''>
-                <img src={images.tokenimg} alt="" className='h-[100%] w-full rounded-t-[15px] object-cover ' />
+            <div className='h-[320px]'>
+                <img src={img} alt="" className='h-[100%] w-full rounded-t-[15px] object-cover ' />
             </div>
             <div className='py-6 px-3 mt-0 flex flex-col gap-2'>
                 <h1 className='md:text-xl text-lg text-white font-medium'>Muttnik the dog <span className='text-[#e9e8ea] font-light'>[$MUTT]</span></h1>
