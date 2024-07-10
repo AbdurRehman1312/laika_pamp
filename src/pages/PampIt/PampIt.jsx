@@ -151,7 +151,9 @@ const PampIt = () => {
                             </a>
                         </div>
                         <div className='flex items-center gap-10 mt-7'>
-                            <img src={images.astrodog} alt="" className='w-20' />
+                            <div className='w-[70px] h-[70px]'>
+                                <img src={images.astrodog} alt="" className='w-full h-[100%] object-cover rounded-[15px]' />
+                            </div>
                             <div className='flex flex-col gap-2'>
                                 <h1 className=' text-lg text-white font-medium'>Muttnik the dog <span className='text-[#e9e8ea] font-light'>[$MUTT]</span></h1>
                                 <div className='flex items-center gap-1'><p className=' text-sm text-[#e9e8ea] '>created by </p><p className='font-semibold text-white  text-sm custom_text'> 0xErd45...</p></div>
@@ -195,12 +197,12 @@ const PampIt = () => {
                                 <Comment key={index} {...comment} />
                             ))}
                             <div className='relative'>
-                                <Input type="text" id="comment" placeholder="Write a comment" className="bg_glass2 mt-3 border-0 md:text-lg text-base rounded-[10px] py-8 placeholder:px-10 w-full" />
+                                <Input type="text" id="comment" placeholder="Write a comment" className="bg_glass2 mt-3 border-0 md:text-lg text-base pl-12 rounded-[10px] py-8 w-full" />
 
                                 <ButtonImageP image={images.arrowr} style={"w-[40px] md:p-2 md:py-3 flex justify-center absolute md:top-[30%] top-[28%] right-3 "} />
 
-                                <div className='flex items-center gap-2 absolute top-[38%] left-3'>
-                                    <img src={images.userdp} alt="" className='w-8' />
+                                <div className='flex items-center gap-2 absolute top-[38%] left-3 w-[25px] h-[25px]'>
+                                    <img src={images.userdp} alt="" className='w-full h-[100%] object-cover rounded-[5px]' />
                                 </div>
                             </div>
                         </div>

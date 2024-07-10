@@ -7,8 +7,8 @@ const ProfileCard = ({ username, profile_id, points, rank, like, message, profil
         <>
             <div className={`  rounded-3xl py-9 px-8 ${style}`}>
                 <div className={`flex items-center  gap-2 ${style_2}`}>
-                    <div className='rounded-[50%] flex-shrink-0'>
-                        <img src={image} alt="" className='w-16' />
+                    <div className='w-[45px] h-[45px] flex-shrink-0'>
+                        <img src={image} alt="" className='w-full h-[100%] object-cover rounded-[50%]' />
                     </div>
                     <div className='flex flex-col '>
                         <h1 className='text-lg xl:text-xl font-medium'>{username}</h1>

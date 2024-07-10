@@ -170,6 +170,12 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.custom_text3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
+}
 
 ::-webkit-scrollbar {
   width: 7px;

@@ -9,7 +9,7 @@ const MuttnikCard = ({ image, style, created_id, market, message, text, value_pr
             <div className={`w-full m-auto bg_header relative bg_black_gradient mt-5 rounded-[30px] py-6 px-8 ${style}`}>
                 <div className='flex items-start gap-5 '>
                     <div className='rounded-2xl flex-shrink-0'>
-                        <img src={image} alt="" className='w-24 h-24' />
+                        <img src={image} alt="" className='w-24 h-24 object-cover rounded-[15px]' />
                     </div>
                     <div className='flex flex-col gap-1'>
                         <h1 className='md:text-2xl text-lg text-white font-medium'>Muttnik the dog <span className='text-[#e9e8ea] font-light'>[$MUTT]</span></h1>

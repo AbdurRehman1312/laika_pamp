@@ -11,18 +11,12 @@ import { Link } from 'react-router-dom';
 import ButtonTextImageP from '../ButtonTextImageP/ButtonTextImageP';
 
 const LeaderBoardTable = ({ date = true, leaderboardLength, style, all = false }) => {
-    const leaderboard = [{
-        rank: 256,
-        user: "You",
-        loyalty: "100%",
-        points: "14",
-    }];
+    const leaderboard = [];
     for (let i = 1; i <= leaderboardLength; i++) {
         if (i !== 256) {
             leaderboard.push({
                 rank: i,
                 user: "Dogelord54",
-                loyalty: "100%",
                 points: "4526",
             });
         }
@@ -32,21 +26,19 @@ const LeaderBoardTable = ({ date = true, leaderboardLength, style, all = false }
             <h1 className='font-bungee md:text-3xl text-xl'>LEADERBOARD</h1>
             {date && <p className='md:text-lg text-sm text-gray-400'>June 12th, 2024<span className='text-gray-400 mx-3'>8:26</span></p>}
             <div className='w-full mt-10'>
-                <Table className="border">
+                <Table className="">
                     <TableHeader>
-                        <TableRow>
+                        <TableRow className="bg-blue-600">
                             <TableHead>Rank</TableHead>
                             <TableHead>User</TableHead>
-                            <TableHead>Loyalty</TableHead>
                             <TableHead >Points</TableHead>
                         </TableRow>
                     </TableHeader>
                     <TableBody>
                         {leaderboard.map((item, index) => (
-                            <TableRow key={item.rank} className={index === 0 ? 'bg-blue-600' : ''}>
-                                <TableCell className="font-medium">{item.rank}</TableCell>
-                                <TableCell>{item.user}</TableCell>
-                                <TableCell>{item.loyalty}</TableCell>
+                            <TableRow key={item.rank} className={index === 0 ? '' : ''}>
+                                <TableCell className="font-medium bg-[#220b44]">{item.rank}</TableCell>
+                                <TableCell className='custom_text3'>{item.user}</TableCell>
                                 <TableCell>{item.points}</TableCell>
                             </TableRow>
                         ))}

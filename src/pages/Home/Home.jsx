@@ -201,11 +201,11 @@ const Home = () => {
                   </button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-64">
-                  
-                    <DropdownMenuCheckboxItem  checked={Enable}
-          onCheckedChange={setEnable} >Enable tokens with a suspicious holder repartition (enabled as standard)</DropdownMenuCheckboxItem>
-                    <DropdownMenuCheckboxItem checked={UnEnable}
-          onCheckedChange={setUnEnable}>Disable token pop animation (enabled as standard)</DropdownMenuCheckboxItem>
+
+                  <DropdownMenuCheckboxItem checked={Enable}
+                    onCheckedChange={setEnable} >Enable tokens with a suspicious holder repartition (enabled as standard)</DropdownMenuCheckboxItem>
+                  <DropdownMenuCheckboxItem checked={UnEnable}
+                    onCheckedChange={setUnEnable}>Disable token pop animation (enabled as standard)</DropdownMenuCheckboxItem>
 
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -229,7 +229,8 @@ const Home = () => {
                   <SelectValue placeholder="order: desc" />
                 </SelectTrigger>
                 <SelectContent >
-                  <SelectItem value="desc">desc</SelectItem>
+                  <SelectItem value="desc">Descending</SelectItem>
+                  <SelectItem value="asce">Ascending</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -241,29 +242,29 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className='flex lg:flex-row flex-col lg:items-start gap-4 justify-between'>
-        <div className='relative w-full xl:w-[40%] lg:w-[35%]'>
+      <div className='flex lg:flex-row flex-col lg:items-start gap-y-4 gap-x-10 justify-between'>
+        <div className='relative w-full xl:w-[43%] lg:w-[35%]'>
           <LeaderBoardTable leaderboardLength={10} style={"bg_purple2"} all={true} date={false} />
         </div>
         <div className='xl:w-[57%] lg:w-[65%] flex flex-col gap-4'>
-        <div className='border  z-[100] w-full   rounded-[30px] border-primary bg_glass lg:p-10 p-5 '>
-          <h1 className='font-bungee md:text-3xl text-xl'>Profile</h1>
-          <div className='mt-8'>
-            <ProfileCard image={images.dp} username={"DipUser456"} profile_id={"1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71"} points={5400} rank={"#42/352"} like={2} message={0} profile={1} style={"bg-[#050809]"} />
+          <div className='border  z-[100] w-full   rounded-[30px] border-primary bg_glass lg:p-10 p-5 '>
+            <h1 className='font-bungee md:text-3xl text-xl'>Profile</h1>
+            <div className='mt-8'>
+              <ProfileCard image={images.dp} username={"DipUser456"} profile_id={"1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71"} points={5400} rank={"#42/352"} like={2} message={0} profile={1} style={"bg-[#050809]"} />
+            </div>
           </div>
-        </div>
-        <div className='border  z-[100] w-full   rounded-[30px] border-primary bg_glass lg:p-10 p-5 '>
-          <h1 className='font-bungee md:text-3xl text-xl'>TOP 3 DIPPERS</h1>
-          <div className='mt-8 flex flex-col md:flex-row justify-center lg:justify-start 2xl:justify-center  items-center w-full gap-10'>
-            <DipperCard image={images.dp} username={"DipUser456"} profile_id={"1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71"} points={5400} rank={"#42/352"} like={2} message={0} profile={1} style={"bg-[#050809] xl:w-[47vh] border border-secondary border-4"} style_3={"bg-secondary"} badge={"#1"}/>
-            <div className='flex flex-col items-start gap-10 md:gap-12'>
-            <DipperCard image={images.dp} username={"DipUser456"} profile_id={"1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71"} points={5400} rank={"#42/352"} like={2} message={0} profile={1} style={"bg-[#050809] xl:w-[45vh] border border-[#bf80ff] border-4"} style_3={"bg-[#bf80ff]"} badge={"#2"}/>
-            <DipperCard image={images.dp} username={"DipUser456"} profile_id={"1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71"} points={5400} rank={"#42/352"} like={2} message={0} profile={1} style={"bg-[#050809] xl:w-[40vh] border border-[#4563ff] border-4"} style_3={"bg-[#4563ff]"} badge={"#3"}/>
+          <div className='border z-[100] w-full rounded-[30px] border-primary bg_glass lg:px-10 p-5 '>
+            <h1 className='font-bungee md:text-3xl text-xl'>TOP 3 DIPPERS</h1>
+            <div className='mt-8 flex flex-col md:flex-row justify-center lg:justify-center 2xl:justify-center  items-center w-full gap-10'>
+              <DipperCard image={images.dp} username={"DipUser456"} profile_id={"1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71"} points={5400} rank={"#42/352"} like={2} message={0} profile={1} style={"bg-[#050809] xl:w-[47vh] border border-secondary border-4"} style_3={"bg-secondary"} badge={"#1"} />
+              <div className='flex flex-col items-start gap-10 md:gap-12'>
+                <DipperCard image={images.dp} username={"DipUser456"} profile_id={"1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71"} points={5400} rank={"#42/352"} like={2} message={0} profile={1} style={"bg-[#050809] xl:w-[45vh] border scale-[1] md:scale-[0.9] border-[#bf80ff] border-4"} style_3={"bg-[#bf80ff]"} badge={"#2"} />
+                <DipperCard image={images.dp} username={"DipUser456"} profile_id={"1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71"} points={5400} rank={"#42/352"} like={2} message={0} profile={1} style={"bg-[#050809] xl:w-[40vh] border border-[#4563ff] scale-[1] md:scale-[0.8] border-4"} style_3={"bg-[#4563ff]"} badge={"#3"} />
+              </div>
             </div>
           </div>
         </div>
-        </div>
-       
+
       </div>
     </section>
   )

@@ -3,7 +3,7 @@ import * as React from "react"
 import { cn } from "@/lib/utils"
 
 const Table = React.forwardRef(({ className, ...props }, ref) => (
-  <div className="relative w-full overflow-auto [&::-webkit-scrollbar]:hidden">
+  <div className="relative w-full rounded-t-[20px] overflow-auto [&::-webkit-scrollbar]:hidden ">
     <table
       ref={ref}
       className={cn("w-full caption-bottom text-sm  ", className)}
@@ -37,7 +37,7 @@ const TableRow = React.forwardRef(({ className, ...props }, ref) => (
   <tr
     ref={ref}
     className={cn(
-      "border border-gray-400 hover:bg-blue-600 text-center transition-colors font-light  data-[state=selected]:bg-muted",
+      "border border-primary text-center transition-colors font-light  data-[state=selected]:bg-muted",
       className
     )}
     {...props} />
@@ -48,7 +48,7 @@ const TableHead = React.forwardRef(({ className, ...props }, ref) => (
   <th
     ref={ref}
     className={cn(
-      "h-12 px-4 text-center align-middle border py-7 text-lg border-gray-400 font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0",
+      "h-12 px-4 text-center align-middle border-2 py-7 text-lg border-primary font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0",
       className
     )}
     {...props} />
@@ -58,7 +58,7 @@ TableHead.displayName = "TableHead"
 const TableCell = React.forwardRef(({ className, ...props }, ref) => (
   <td
     ref={ref}
-    className={cn("p-4 align-middle border border-gray-400 [&:has([role=checkbox])]:pr-0", className)}
+    className={cn("p-4 align-middle border-2 border-primary [&:has([role=checkbox])]:pr-0", className)}
     {...props} />
 ))
 TableCell.displayName = "TableCell"

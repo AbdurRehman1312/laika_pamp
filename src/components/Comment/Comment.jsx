@@ -1,11 +1,13 @@
 import React from 'react'
 import * as images from "../../assets"
-const Comment = ({userid, userimg, time, likes, msg}) => {
+const Comment = ({ userid, userimg, time, likes, msg }) => {
     return (
         <div className='p-5 mt-5 bg_glass2 rounded-[10px]'>
             <div className='flex justify-between items-center'>
                 <div className='flex items-center gap-3'>
-                    <img src={images[userimg]} alt="" className='w-8' />
+                    <div className='w-[25px] h-[25px]'>
+                        <img src={images[userimg]} alt="" className='w-full h-[100%] object-cover rounded-[5px]' />
+                    </div>
                     <p className='font-semibold text-white md:text-base text-sm custom_text2'>{userid}</p>
                 </div>
                 <div className='flex items-center gap-3'>

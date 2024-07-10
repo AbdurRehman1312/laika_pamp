@@ -2,15 +2,15 @@ import React from 'react'
 import * as images from "../../assets"
 import { Progress } from "@/components/ui/progress"
 import ButtonRocket from '../ButtonRocket/ButtonRocket'
-import { Link } from 'react-router-dom' 
+import { Link } from 'react-router-dom'
 
-const AlpaTrumpCard = ({ text, symbol, image, style, created_id, market, message, badge = false, value_progress}) => {
+const AlpaTrumpCard = ({ text, symbol, image, style, created_id, market, message, badge = false, value_progress }) => {
     return (
         <>
-            <Link className={`w-full m-auto bg_header relative bg_black_gradient mt-5 z-40 rounded-[30px] py-6 px-8 ${style}`}>
+            <Link to={"/profile"} className={`w-full m-auto bg_header relative bg_black_gradient mt-5 z-40 rounded-[30px] py-6 px-8 ${style}`}>
                 <div className='flex items-start gap-5 '>
-                <div className='rounded-2xl flex-shrink-0 w-[64px] lg:w-[96px] h-[96px] '>
-                        <img src={image} alt="" className='h-[100%] w-full object-cover' />
+                    <div className='rounded-2xl flex-shrink-0 w-[64px] lg:w-[96px] h-[96px] '>
+                        <img src={image} alt="" className='h-[100%] w-full object-cover rounded-[20px]' />
                     </div>
                     <Link to={"/profile"} className='flex flex-col gap-1'>
                         <h1 className='md:text-2xl text-lg text-white font-medium'>{text} <span className='text-[#e9e8ea] font-light'>{symbol}</span></h1>
@@ -28,7 +28,7 @@ const AlpaTrumpCard = ({ text, symbol, image, style, created_id, market, message
                             <p className='text-white font-medium text-sm md:text-base'>{message}</p>
                         </div>
                         <div>
-                            <ButtonRocket style={"bg-black"}/>
+                            <ButtonRocket style={"bg-black"} />
                         </div>
                     </div>
                 </div>

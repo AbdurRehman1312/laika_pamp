@@ -75,7 +75,6 @@ const Header = () => {
               </SelectContent>
             </Select>
             <ButtonTextP name="Connect Wallet" style={" lg:p-2 xl:p-3 "} />
-
           </div>
           <div className="lg:hidden flex justify-end items-center">
             <img
@@ -139,8 +138,8 @@ const Header = () => {
             <h1 className='font-bungee text-lg lg:text-base xl:text-lg text-nowrap'>5400 pts</h1>
             <h1 className='text-lg lg:text-base xl:text-lg mt-1 xl:text-nowrap'>Rank: <span className='font-bungee  '>#42/352</span></h1>
           </div> */}
-          <div className='rounded-[50%]'>
-            <img src={images.dp} alt="" className='w-16' />
+          <div className='w-[50px] h-[50px]'>
+            <img src={images.dp} alt="" className='w-full h-[100%] object-cover rounded-[50%]' />
           </div>
         </Link>
       </header>

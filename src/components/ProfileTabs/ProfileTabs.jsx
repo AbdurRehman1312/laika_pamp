@@ -11,7 +11,7 @@ const coins_card = [
         token_number: "6543213",
         network_number: "254,35",
         network_name: "DOGE",
-         style: "sm;gap-0 gap-5",
+        style: "sm;gap-0 gap-5",
     },
     {
         text: "AlpaTrump",
@@ -20,7 +20,7 @@ const coins_card = [
         token_number: "6543213",
         network_number: "254,35",
         network_name: "DOGE",
-         style: "sm;gap-0 gap-5",
+        style: "sm;gap-0 gap-5",
     },
     {
         text: "AlpaTrump",
@@ -29,7 +29,7 @@ const coins_card = [
         token_number: "6543213",
         network_number: "254,35",
         network_name: "DOGE",
-         style: "sm;gap-0 gap-5",
+        style: "sm;gap-0 gap-5",
     },
 ]
 
@@ -41,11 +41,11 @@ const coins_created_card = [
         token_number: "6543213",
         network_number: "254,35",
         network_name: "DOGE",
-         style: "sm;gap-0 gap-5",
+        style: "sm;gap-0 gap-5",
     },
 ]
 
-const followers_card =[{
+const followers_card = [{
     username: "DipUser456",
     image: images.dp,
     profile_id: "1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71",
@@ -70,7 +70,7 @@ const followers_card =[{
     style_2: "flex-wrap lg:flex-nowrap"
 }]
 
-const following_card =[{
+const following_card = [{
     username: "DipUser456",
     image: images.dp,
     profile_id: "1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71",
@@ -118,9 +118,9 @@ const ProfileTabs = () => {
             case "Followers":
                 return (
                     <>
-                   <div className='overflow-y-auto p-5 h-[50vh]'>
+                        <div className='overflow-y-auto p-5 h-[50vh]'>
                             {followers_card.map((item, index) => (
-                                <ProfileCard image={item.image} username={item.username} key={index} profile_id={item.profile_id} points={item.points} rank={item.rank} like={item.like} message={item.message} profile={item.profile} style={item.style} style_2={item.style_2}/>
+                                <ProfileCard image={item.image} username={item.username} key={index} profile_id={item.profile_id} points={item.points} rank={item.rank} like={item.like} message={item.message} profile={item.profile} style={item.style} style_2={item.style_2} />
                             ))}
                         </div>
                     </>
@@ -128,9 +128,9 @@ const ProfileTabs = () => {
             case "Following":
                 return (
                     <>
-<div className='overflow-y-auto p-5 h-[50vh]'>
+                        <div className='overflow-y-auto p-5 h-[50vh]'>
                             {following_card.map((item, index) => (
-                                <ProfileCard image={item.image} username={item.username} key={index} profile_id={item.profile_id} points={item.points} rank={item.rank} like={item.like} message={item.message} profile={item.profile} style={item.style} style_2={item.style_2}/>
+                                <ProfileCard image={item.image} username={item.username} key={index} profile_id={item.profile_id} points={item.points} rank={item.rank} like={item.like} message={item.message} profile={item.profile} style={item.style} style_2={item.style_2} />
                             ))}
                         </div>
                     </>
